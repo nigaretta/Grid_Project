@@ -1,0 +1,137 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "main main aside"
+    "footer footer footer";
+
+    header {
+        grid-area: header;
+        padding:4rem 7rem;
+        height:5px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-links a {
+            text-decoration: none;
+            color:grey;
+            padding:15px;
+        }
+        .nav-links a:hover {
+            color:rgb(247, 76, 76);
+            transition: 1s;
+        }
+    }
+
+    main {
+        grid-area: main;
+        margin-left:7rem;
+        width:670px;
+        
+        img {
+            width:670px;
+            height:290px;
+        }
+
+        .paragraph {
+            margin-top:20px;
+            display: flex;
+            justify-content: space-between;
+            h1 {
+                font-size:56px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            p {
+                color:grey;
+                line-height: 26px;
+            }
+        }
+        button {
+            position:absolute;
+            height:40px;
+            width:170px;
+            border:none;
+            background-color:rgb(247, 76, 76);
+            color:white;
+            letter-spacing: 3px;  
+            margin:8.7rem 21.5rem;
+        }
+        button:hover {
+            background-color: rgb(168, 41, 41);
+            cursor:pointer;
+            box-shadow: 2px 4px 6px grey;
+        }
+    }
+
+    aside {
+        .aside {
+            grid-area: aside;
+            border-bottom: 1px solid white;
+            background-color: rgba(20, 20, 20, 0.945);
+            margin-right:120px;
+            height:125px;
+            padding:20px;
+            
+            h2 {
+                color:orange;
+            }
+            h2:hover {
+                color:white;
+            }
+            h3 {
+                color:rgb(243, 237, 237);
+                line-height: 55px;
+            }
+            h3:hover {
+                color:rgb(130, 130, 197);
+            }
+            h2,h3,p:hover {
+                cursor:pointer;
+            }
+            p {
+                color:rgb(214, 209, 209);
+                line-height:25px;
+            }
+
+        }
+
+    }
+
+    footer {
+        display:flex;
+        justify-content: space-between;
+        margin:3rem 7rem;
+        grid-area: footer;
+        .left {
+            img {
+                width:100px;
+            }
+        }
+        .right {
+            
+            h2,h3,p {
+                padding:5px;
+                line-height:23px;
+            }
+            h2,h3,p:hover {
+                cursor:pointer;
+            }
+            h2 {
+                color:rgb(169, 163, 163);
+                letter-spacing: 1px;
+            }
+            p {
+                color:rgba(101, 97, 97, 0.906);
+            }
+            h3:hover{
+                color: rgb(247, 76, 76);
+            }
+        }
+    }
+}
